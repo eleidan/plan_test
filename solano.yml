@@ -7,15 +7,15 @@ profiles:
     environment:
       MY_PROFILE: "first"
     script: bin/test
-    tests:
-      - bin/first
+    test_pattern:
+      - test/*_test.rb
     profile_config:
       advance_on: 'always'
   second:
     environment:
       MY_PROFILE: "second"
     script: bin/test
-    tests:
-      - bin/second
+    test_pattern:
+      - spec/*_spec.rb
     profile_config:
       advance_on: 'always'
